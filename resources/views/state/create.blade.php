@@ -7,7 +7,7 @@
     <title>{{ $title }}</title>
 </head>
 <body>
-    <h1>Citizens Page</h1>
+    <h1>Create A New State</h1>
     
     <form action="{{ route('state.store') }}" method="POST">
         @csrf

@@ -7,7 +7,7 @@
     <title>{{ $title }}</title>
 </head>
 <body>
-    <h1>Ward Page</h1>
+    <h1>Create A New Ward</h1>
 
     <form action="{{ route('ward.store') }}" method="POST">
         @csrf

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\citizen;
 use App\Models\ward;
+use App\Models\state;
+use App\Models\lga;
 
 class CitizensController extends Controller
 {
@@ -58,9 +60,20 @@ class CitizensController extends Controller
     }
 
     public function filterBylocal($id){
-        $data["title"] = "FIlter By State";
+        $data["title"] = "FIlter By LGA";
         $ward = ward::where("lga_id",'=',$id)->first();
         $data["citizens"] = citizen::where('ward_id',$ward->id)->get();
         return view("citizens.index",$data);   
+    }
+
+    public function filterByState($id){
+        $data["title"] = "FIlter By State";
+        
+        $state = state::find($id);
+        $lga = lga::find($state->id);
+        $ward = ward::find($lga->id);
+        // echo $ward->id;
+        $data["citizens"] = citizen::where('ward_id',$ward->id)->get();
+        return view("citizens.index",$data); 
     }
 }

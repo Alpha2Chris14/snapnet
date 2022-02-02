@@ -14,7 +14,7 @@
 
     <ul>
     @foreach($citizens as $citizen)
-        <li>{{$citizen->name}}  |  <a href="{{route('filter',$citizen->ward->id)}}">{{$citizen->ward->name}}</a> | <a href="{{route('filterlocal',$citizen->ward->lga->id)}}"> {{$citizen->ward->lga->name}}</a> | {{$citizen->ward->lga->state->name}}</li>
+        <li>{{$citizen->name}}  |  <a href="{{route('filter',$citizen->ward->id)}}">{{$citizen->ward->name}}</a> | <a href="{{route('filterlocal',$citizen->ward->lga->id)}}"> {{$citizen->ward->lga->name}}</a> | <a href="{{route('filterState',$citizen->ward->lga->state->id)}}"> {{$citizen->ward->lga->state->name}}</a></li>
     @endforeach
     </ul>
 

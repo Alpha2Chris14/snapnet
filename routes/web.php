@@ -46,3 +46,4 @@ Route::get('/ward',[App\Http\Controllers\WardController::class, 'index'])->name(
 //Filter
 Route::get('/filter/{id}',[App\Http\Controllers\CitizensController::class, 'filterByWard'])->name("filter");
 Route::get('/filter/local/{id}',[App\Http\Controllers\CitizensController::class, 'filterByLocal'])->name("filterlocal");
+Route::get('/filter/state/{id}',[App\Http\Controllers\CitizensController::class, 'filterByState'])->name("filterState");

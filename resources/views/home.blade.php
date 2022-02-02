@@ -16,6 +16,16 @@
 
                     {{ __('You are logged in!') }}
                 </div>
+
+                <div>
+                    <ul>
+                        <li><a href="{{route('users')}}">Users</a></li>
+                        <li><a href="{{route('state')}}">State</a></li>
+                        <li><a href="{{route('lga')}}">Local Government</a></li>
+                        <li><a href="{{route('ward')}}">Wards</a></li>
+                        <li><a href="{{route('citizen')}}">Citizens</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

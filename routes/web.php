@@ -20,6 +20,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/users', [App\Http\Controllers\UserController::class, 'index'])->name('users');
 
 //This contains route about the citizens
 Route::get('/citizens/create',[App\Http\Controllers\CitizensController::class, 'create'])->name("citizen.create");

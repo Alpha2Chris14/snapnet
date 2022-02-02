@@ -59,7 +59,7 @@ class CitizensController extends Controller
 
     public function filterBylocal($id){
         $data["title"] = "FIlter By State";
-        $ward = ward::find($id);
+        $ward = ward::where("lga_id",'=',$id)->first();
         $data["citizens"] = citizen::where('ward_id',$ward->id)->get();
         return view("citizens.index",$data);   
     }

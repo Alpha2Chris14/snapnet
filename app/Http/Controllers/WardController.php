@@ -15,7 +15,7 @@ class WardController extends Controller
     }
 
     public function index(){
-        $data["title"] = "All LGA";
+        $data["title"] = "All Wards";
         $data["wards"] = ward::all();
 
         return view("ward.index",$data);

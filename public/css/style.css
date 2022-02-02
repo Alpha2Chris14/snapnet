@@ -1,0 +1,23 @@
+body{
+    background: rgb(160, 84, 214);
+}
+h1{
+    text-align: center;
+    color: white;
+}
+form{
+    background: grey;
+    width:300px;
+    height: max-content;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+}
+
+form input, form select,button{
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}

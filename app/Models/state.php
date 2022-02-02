@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class state extends Model
 {
     use HasFactory;
+
+    public function lga(){
+        return $this->hasOne('App\Models\lga');
+    }
 }

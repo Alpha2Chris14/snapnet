@@ -14,7 +14,7 @@
 
     <ul>
     @foreach($citizens as $citizen)
-        <li>{{$citizen->name}}</li>
+        <li>{{$citizen->name}}  |  {{$citizen->ward->name}} | {{$citizen->ward->lga->name}} | {{$citizen->ward->lga->state->name}}</li>
     @endforeach
     </ul>
 

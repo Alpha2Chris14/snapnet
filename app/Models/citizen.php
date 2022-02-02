@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class citizen extends Model
 {
     use HasFactory;
+
+    public function ward(){
+        return $this->belongsTo('App\Models\ward');
+    }
 }

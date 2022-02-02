@@ -12,7 +12,7 @@ class CitizensController extends Controller
     {
         $this->middleware('auth');
     }
-
+    
     public function index(){
         $data["title"] = "All Citizens";
         $data["citizens"] = citizen::all();
@@ -49,5 +49,18 @@ class CitizensController extends Controller
         
         return redirect()->route('citizen');
 
+    }
+
+    public function filterByWard($id){
+        $data["title"] = "FIlter By Ward";
+        $data["citizens"] = citizen::where('ward_id',$id)->get();
+        return view("citizens.index",$data);   
+    }
+
+    public function filterBylocal($id){
+        $data["title"] = "FIlter By State";
+        $ward = ward::find($id);
+        $data["citizens"] = citizen::where('ward_id',$ward->id)->get();
+        return view("citizens.index",$data);   
     }
 }

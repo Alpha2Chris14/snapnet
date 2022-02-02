@@ -42,3 +42,7 @@ Route::get('/lga',[App\Http\Controllers\LgaController::class, 'index'])->name("l
 Route::get('/ward/create',[App\Http\Controllers\WardController::class, 'create'])->name("ward.create");
 Route::post('/ward/store',[App\Http\Controllers\WardController::class, 'store'])->name("ward.store");
 Route::get('/ward',[App\Http\Controllers\WardController::class, 'index'])->name("ward");
+
+//Filter
+Route::get('/filter/{id}',[App\Http\Controllers\CitizensController::class, 'filterByWard'])->name("filter");
+Route::get('/filter/local/{id}',[App\Http\Controllers\CitizensController::class, 'filterByLocal'])->name("filterlocal");
